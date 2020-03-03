@@ -1,0 +1,24 @@
+<h3 >Employee Details</h3><br><br>
+<!--<p *ngFor="let d of products">{{d.name}}</p>-->
+<div *ngFor="let i of details">
+    <div *ngIf="i.id===id ">
+        <div class="row  bg">
+            <div class="col-8">
+                <h4>Employee Name:{{i.name | count:i.gender}}</h4>
+                <h5>Employee Id:{{id}}</h5>
+                <h5>Designation:{{i.Position}}</h5>
+                <h5>Date of Birth:{{i.DOB}}</h5>
+                <h5>Gender:{{i.gender}}</h5>
+                <h5>Date of joining:{{i.joiningDate}}</h5>
+                <h5>Location:{{i.location}}</h5>
+                </div>
+                <div class="col-4">    
+                    <img  src={{i.imageURL}}>
+                </div>
+        </div><br>
+        <div>
+            <button class="btn btn-primary" (click)="previous()" [disabled]="perviousStatus">Previous</button>&nbsp;&nbsp;
+            <button class="btn btn-primary" (click)="next()" [disabled]="nextStatus">Next</button>
+        </div>
+    </div>
+</div>
