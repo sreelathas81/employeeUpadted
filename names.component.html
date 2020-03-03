@@ -1,0 +1,7 @@
+<div>
+<br><br><h3>Employee Names</h3><br><br><br>
+<ul>
+<li *ngFor="let d of info"><a [routerLink]="['/details',d.id]">{{d.name}}</a></li>
+</ul>
+</div>
+    
